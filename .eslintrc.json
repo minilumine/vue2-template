@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base"
+  ],
+  "ignorePatterns": ".gitignore",
+  "overrides": [
+    {
+      "files": ["**/__tests__/*.[jt]s", "**/tests/unit/**/*.spec.[jt]s"],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "parser": "@babel/eslint-parser"
+  },
+  "plugins": ["vue", "jest", "prettier", "@typescript-eslint"],
+  "rules": {
+    "semi": 0
+  }
+}
